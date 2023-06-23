@@ -1,7 +1,25 @@
-.App {
-  text-align: center;
-}
+@import '../src/CSS/sideBar.css';
+@import '../src/CSS/topbar.css';
+@import '../src/CSS/menu.css';
+@import '../src/CSS/home.css';
+@import '../src/CSS/login.css';
+@import '../src/CSS/contact.css';
+@import '../src/CSS/note.css';
 
+
+
+
+body{ 
+  background-color: #77B3D3;
+}
+.container{
+  padding: 25px;
+}
+ /* .App {
+  text-align: center;
+} */
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +53,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

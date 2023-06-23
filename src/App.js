@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import HelpedHome from './Pages/HelpedHome';
+import {Routes, Route} from 'react-router-dom';
+import Login from './Pages/Login';
+import HelpedCalendar from './Pages/HelpedCalendar';
+import HelpedContacts from './Pages/HelpedContacts';
+import HelpedNotes from './Pages/HelpedNotes';
+import HelpedClock from './Pages/HelpedClock';
+import HelpedMessage from './Pages/HelpedMessage';
+import HelpedAlbum from './Pages/HelpedAlbum';
+import HelpedNoteDetail from './Pages/HelpedNoteDetails';
+import HelpedContactDetails from './Pages/HelpedContactDetails';
+ 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        {/* Redirection entre les composant Pages avec route */}
+        <Routes>
+          <Route path="/" element={ <HelpedHome /> } />
+          <Route path="/login" element={ <Login /> } /> 
+          <Route path="/calendrier" element={ <HelpedCalendar /> } /> 
+          <Route path="/contact" element={ <HelpedContacts /> } /> 
+          <Route path="/note" element={ <HelpedNotes /> } /> 
+          <Route path="/horloge" element={ <HelpedClock /> } /> 
+          <Route path="/message" element={ <HelpedMessage /> } /> 
+          <Route path="/album" element={ <HelpedAlbum /> } /> 
+          <Route path="/note/details/1" element={ <HelpedNoteDetail /> } /> 
+          <Route path="/contact/details/1" element={ <HelpedContactDetails /> } /> 
+        </Routes> 
+      </div>
     </div>
   );
 }
